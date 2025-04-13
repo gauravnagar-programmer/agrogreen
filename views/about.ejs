@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="flex px-5 py-4  justify-between lg:gap-9 items-center">
+    <a href="/"><h1 class="font-semibold text-xl">AGROGREEN</h1></a>
+    <div class="dropdown-menu absolute -top-full  left-0 text-xl bg-white  flex flex-col gap-5 w-full lg:static lg:flex-row lg:justify-between items-center py-2">
+      <ul class="flex flex-col lg:flex-row items-center gap-5">
+        <a href="/about"><li>About Us</li></a>
+        <li>Products</li>
+        <li>Why choose us</li>
+      </ul>
+      <div>
+        <button class="bg-red-500 rounded px-3 py-2 text-white ">Buy Now</button>
+      </div>
+    </div>
+    <div class="menubtn lg:hidden">
+      <i class="fa-solid fa-bars cursor-pointer"></i>
+
+    </div>
+
+  </header>
+  <main>
+    <div class="relative" >
+      <img src="/images/tractor.jpg" alt="">
+      <h1 class="absolute left-[50%] text-gray-200 text-4xl font-bold bottom-2 -translate-10">About</h1>
+    </div>
+    <div class="px-5 py-5 space-y-7">
+      <div class="flex flex-col items-center">
+        <img class="rounded-lg w-[80%]" src="/images/farmsunset (1).jpg" alt="">
+        <div class="space-y-3 text-gray-900 mt-5">
+          <h1 class="text-2xl font-bold ">EveryOne should have access to nutritious food.</h1>
+          <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis similique ut officiis beatae dolor a enim incidunt mollitia reprehenderit doloribus.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="rounded-lg w-[80%]" src="/images/vegetablebucket.jpg" alt="">
+        <div class="space-y-3 text-gray-900 mt-5">
+          <h1 class="text-2xl font-bold ">We are here to alive humanity.</h1>
+          <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis similique ut officiis beatae dolor a enim incidunt mollitia reprehenderit doloribus.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-orange-50 py-5 ">
+    <h1 class="text-3xl text-teal-900 font-bold text-center">AGROGREEN</h1>
+    <div class="flex justify-around px-5 py-5 mx-7  border-b-1">
+      <div>
+        <h1 class="text-xl text-bold">Quick Link</h1>
+        <ul class="text-gray-700">
+          <a href="/"><li>Home</li></a>
+          <a href="/about"><li>About</li></a>
+          <a href="/contact"><li>Contact</li></a>
+          <li>Why choose us</li>
+          <li>Privacy Policy</li>
+          <li>Team</li>
+        </ul>
+      </div>
+      <div>
+        <h1 class="text-xl text-bold">Products</h1>
+        <ul class="text-gray-700">
+          <li>Tomato</li>
+          <li>Patato</li>
+          <li>Carrot</li>
+          <li>Red Chilli</li>
+       
+        </ul>
+      </div>
+    </div>
+    <div class="my-5 text-center text-gray-700">
+      © 2025 Agrogreen | All Rights  Reserved
+    </div>
+  </footer>
+
+  <script>
+    const menubtn = document.querySelector('.menubtn');
+    const dropdown = document.querySelector('.dropdown-menu');
+
+    menubtn.addEventListener('click',()=>{
+      dropdown.classList.toggle('top-[55px]')
+    })
+  </script>
+</body>
+</html>

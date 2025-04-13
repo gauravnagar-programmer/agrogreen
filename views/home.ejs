@@ -8,9 +8,22 @@
   </head>
   <body>
     <div class="">
-      <header class="flex px-5 py-4 justify-between items-center">
-        <h1 class="font-semibold text-xl">AGROGREEN</h1>
-        <i class="fa-solid fa-bars cursor-pointer"></i>
+      <header class="flex px-5 py-4  justify-between lg:gap-9 items-center">
+        <a href="/"><h1 class="font-semibold text-xl">AGROGREEN</h1></a>
+        <div class="dropdown-menu absolute -top-full  left-0 text-xl bg-white  flex flex-col gap-5 w-full lg:static lg:flex-row lg:justify-between items-center py-2">
+          <ul class="flex flex-col lg:flex-row items-center gap-5">
+            <a href="/about"><li>About Us</li></a>
+            <li>Products</li>
+            <li>Why choose us</li>
+          </ul>
+          <div>
+            <button class="bg-red-500 rounded px-3 py-2 text-white ">Buy Now</button>
+          </div>
+        </div>
+        <div class="menubtn lg:hidden">
+          <i class="fa-solid fa-bars cursor-pointer"></i>
+
+        </div>
 
       </header>
       <main class="bg-gray-100">
@@ -118,7 +131,7 @@
             <div class="bg-orange-100 px-5 py-5 space-y-3">
               <div>
 
-                <img src="../public/images/carrot.jpg" alt="">
+                <img class="rounded-lg" src="/images/farm.jpg" alt="">
               </div>
               <div class="space-y-4 py-5 ">
                 <h1 class=" text-teal-900 font-semibold text-2xl">EveryOne should have access to nutritious food</h1>
@@ -187,9 +200,9 @@
           <div>
             <h1 class="text-xl text-bold">Quick Link</h1>
             <ul class="text-gray-700">
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
+              <a href="/"><li>Home</li></a>
+              <a href="/about"><li>About</li></a>
+              <a href="/contact"><li>Contact</li></a>
               <li>Why choose us</li>
               <li>Privacy Policy</li>
               <li>Team</li>
@@ -211,5 +224,14 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      const menubtn = document.querySelector('.menubtn');
+      const dropdown = document.querySelector('.dropdown-menu');
+
+      menubtn.addEventListener('click',()=>{
+        dropdown.classList.toggle('top-[55px]')
+      })
+    </script>
   </body>
 </html>
